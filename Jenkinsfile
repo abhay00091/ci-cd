@@ -18,7 +18,7 @@ pipeline {
               }
       stage('Deploy') {
          steps {
-                  sh 'scp jke.war TOMCAT_USER@TOMCAT_SERVER:/opt/tomcat/webapps/'
+                  sh 'scp jke.war ${TOMCAT_USER}@${TOMCAT_SERVER}:/opt/tomcat/webapps/'
                 } 
               }
       stage('restart') {
