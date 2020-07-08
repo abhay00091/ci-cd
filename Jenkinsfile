@@ -13,10 +13,11 @@ pipeline {
               }
       stage('Deploy microservice') {
          steps {
-                  sh 'echo "Building the code"'
+                  sh 'chmod +x rundocker_compose.sh'
+		  sh './rundocker_compose.sh'
                 } 
               }
-      stage('Deploy') {
+      /*stage('Deploy') {
          steps {
                   sh 'scp jke.war ${TOMCAT_USER}@${TOMCAT_SERVER}:/opt/tomcat/webapps/'
                 } 
@@ -26,6 +27,6 @@ pipeline {
                   sh 'chmod +x restart_tomcat.sh'
                   sh './restart_tomcat.sh'
                 } 
-              }
+              }*/
   }
 }
