@@ -6,6 +6,12 @@ pipeline {
                   sh 'echo "hello world"'
                 } 
               }
+      stage('install Dependency') {
+         steps {
+                  sh 'chmod +x install-dependency.sh'
+                  sh 'echo $PASSWORD | sudo -S install-dependency.sh'
+                }
+              }
        stage('check docker version') {
          steps {
                   sh 'docker version'
