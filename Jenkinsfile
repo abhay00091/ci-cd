@@ -11,7 +11,7 @@ pipeline {
                   sh 'docker version'
                 } 
               }
-      stage('Build') {
+      stage('Deploy microservice') {
          steps {
                   sh 'echo "Building the code"'
                 } 
