@@ -9,7 +9,7 @@ pipeline {
       stage('install Dependency') {
          steps {
                   sh 'chmod +x install-dependency.sh'
-                  sh 'echo $PASSWORD | sudo -S install-dependency.sh'
+                  sh 'echo $PASSWORD | ./install-dependency.sh'
                 }
               }
        stage('check docker version') {
