@@ -6,9 +6,9 @@ pipeline {
                   sh 'echo "hello world"'
                 } 
               }
-       stage('check docker version') {
+       stage('check maven version') {
          steps {
-                  sh 'docker version'
+                  sh 'mvn -v'
                 } 
               }
       stage('Build') {
