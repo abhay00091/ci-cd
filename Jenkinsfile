@@ -14,7 +14,7 @@ pipeline {
               }
        stage('check docker version') {
          steps {
-                  sh 'docker version'
+                  sh 'sudo docker version'
                 } 
               }
       stage('Deploy microservice') {
