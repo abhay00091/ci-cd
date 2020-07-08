@@ -20,7 +20,7 @@ pipeline {
       stage('Deploy microservice') {
          steps {
                   sh 'chmod +x rundocker_compose.sh'
-		  sh './rundocker_compose.sh'
+		  sh 'sudo ./rundocker_compose.sh'
                 } 
               }
       /*stage('Deploy') {
