@@ -18,3 +18,5 @@ pipeline {
 		  sh 'sudo ./rundocker_compose.sh'
                 } 
 }
+}
+}
