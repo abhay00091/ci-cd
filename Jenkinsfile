@@ -1,11 +1,6 @@
 pipeline {
   agent { label 'test' }
     stages {
-       stage('test') {
-         steps {
-                  sh 'echo "hello world"'
-                } 
-              }
       stage('install Dependency') {
          steps {
                   sh 'chmod +x install-dependency.sh'
@@ -22,17 +17,4 @@ pipeline {
                   sh 'chmod +x rundocker_compose.sh'
 		  sh 'sudo ./rundocker_compose.sh'
                 } 
-              }
-      /*stage('Deploy') {
-         steps {
-                  sh 'scp jke.war ${TOMCAT_USER}@${TOMCAT_SERVER}:/opt/tomcat/webapps/'
-                } 
-              }
-      stage('restart') {
-         steps {
-                  sh 'chmod +x restart_tomcat.sh'
-                  sh './restart_tomcat.sh'
-                } 
-              }*/
-  }
 }
